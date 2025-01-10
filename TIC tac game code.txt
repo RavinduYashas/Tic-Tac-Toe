@@ -1,0 +1,374 @@
+Option Explicit
+Dim checker As Boolean
+
+
+Private Sub btnTic1_Click()
+If checker = False Then
+btnTic1.Caption = "X"
+checker = True
+Else
+btnTic1.Caption = "O"
+checker = False
+End If
+Call score
+End Sub
+
+Private Sub btnTic11_Click()
+btnTic1.Caption = ""
+btnTic2.Caption = ""
+btnTic3.Caption = ""
+btnTic4.Caption = ""
+btnTic5.Caption = ""
+btnTic6.Caption = ""
+btnTic7.Caption = ""
+btnTic8.Caption = ""
+btnTic9.Caption = ""
+Labe13.Caption = 0
+Label4.Caption = 0
+
+btnTic1.Enabled = True
+btnTic2.Enabled = True
+btnTic3.Enabled = True
+btnTic4.Enabled = True
+btnTic5.Enabled = True
+btnTic6.Enabled = True
+btnTic7.Enabled = True
+btnTic8.Enabled = True
+btnTic9.Enabled = True
+
+btnTic1.BackColor = &H8000000F
+btnTic2.BackColor = &H8000000F
+btnTic3.BackColor = &H8000000F
+btnTic4.BackColor = &H8000000F
+btnTic5.BackColor = &H8000000F
+btnTic6.BackColor = &H8000000F
+btnTic7.BackColor = &H8000000F
+btnTic8.BackColor = SH8000000F
+btnTic9.BackColor = GH8000000F
+End Sub
+
+Private Sub btnTic2_Click()
+If checker = False Then
+            btnTic2.Caption = "X"
+            checker = True
+        Else
+            btnTic2.Caption = "o"
+            checker = False
+        End If
+        Call score
+        btnTic2.Enabled = False
+
+End Sub
+
+Private Sub btnTic3_Click()
+If checker = False Then
+            btnTic3.Caption = "X"
+            checker = True
+        Else
+            btnTic3.Caption = "o"
+            checker = False
+        End If
+        Call score
+        btnTic3.Enabled = False
+
+End Sub
+
+Private Sub btnTic4_Click()
+If checker = False Then
+            btnTic4.Caption = "X"
+            checker = True
+        Else
+            btnTic4.Caption = "o"
+            checker = False
+        End If
+        Call score
+        btnTic4.Enabled = False
+
+End Sub
+
+Private Sub btnTic5_Click()
+If checker = False Then
+            btnTic5.Caption = "X"
+            checker = True
+        Else
+            btnTic5.Caption = "o"
+            checker = False
+        End If
+        Call score
+        btnTic5.Enabled = False
+
+End Sub
+
+Private Sub btnTic6_Click()
+If checker = False Then
+            btnTic6.Caption = "X"
+            checker = True
+        Else
+            btnTic6.Caption = "o"
+            checker = False
+        End If
+        Call score
+        btnTic6.Enabled = False
+
+End Sub
+
+Private Sub btnTic7_Click()
+If checker = False Then
+            btnTic7.Caption = "X"
+            checker = True
+        Else
+            btnTic7.Caption = "o"
+            checker = False
+        End If
+        Call score
+        btnTic7.Enabled = False
+
+End Sub
+
+Private Sub btnTic8_Click()
+If checker = False Then
+            btnTic8.Caption = "X"
+            checker = True
+        Else
+            btnTic8.Caption = "o"
+            checker = False
+        End If
+        Call score
+        btnTic8.Enabled = False
+
+End Sub
+
+Private Sub btnTic9_Click()
+If checker = False Then
+            btnTic9.Caption = "X"
+            checker = True
+        Else
+            btnTic9.Caption = "o"
+            checker = False
+        End If
+        Call score
+        btnTic9.Enabled = False
+
+End Sub
+
+Private Sub Frame1_Click()
+
+End Sub
+
+Private Sub Frame3_Click()
+
+End Sub
+
+Private Sub UserForm_Click()
+
+End Sub
+
+Private Sub btnTic10_Click()
+        btnTic1.Enabled = True
+        btnTic2.Enabled = True
+        btnTic3.Enabled = True
+        btnTic4.Enabled = True
+        btnTic5.Enabled = True
+        btnTic6.Enabled = True
+        btnTic7.Enabled = True
+        btnTic8.Enabled = True
+        btnTic9.Enabled = True
+        
+        btnTic1.Caption = ""
+        btnTic2.Caption = ""
+        btnTic3.Caption = ""
+        btnTic4.Caption = ""
+        btnTic5.Caption = ""
+        btnTic6.Caption = ""
+        btnTic7.Caption = ""
+        btnTic8.Caption = ""
+        btnTic9.Caption = ""
+        'Labe13.Caption = 0
+        'Labe14.Caption = 0
+        btnTic11.Enabled = True
+        
+        btnTic1.BackColor = &H8000000F
+        btnTic2.BackColor = &H8000000F
+        btnTic3.BackColor = &H8000000F
+        btnTic4.BackColor = &H8000000F
+        btnTic5.BackColor = &H8000000F
+        btnTic6.BackColor = &H8000000F
+        btnTic7.BackColor = &H8000000F
+        btnTic8.BackColor = &H8000000F
+        btnTic9.BackColor = &H8000000F
+        
+End Sub
+
+Private Sub score()
+        If btnTic1.Caption = "X" And btnTic2.Caption = "X" And btnTic3.Caption = "X" Then
+            btnTic1.BackColor = &H80000002
+            btnTic2.BackColor = &H80000002
+            btnTic3.BackColor = &H80000002
+            MsgBox "The Winner is Team X", vbInformation
+            Labe13.Caption = Label3.Caption + 1
+            Call Enable_False
+        End If
+        If btnTic1.Caption = "X" And btnTic4.Caption = "X" And btnTic7.Caption = "X" Then
+            btnTic1.BackColor = &HFF80FF
+            btnTic4.BackColor = &HFF80FF
+            btnTic7.BackColor = &HFF80FF
+            MsgBox "The Winner is Team X", vbInformation
+            Label3.Caption = Label3.Caption + 1
+        Call Enable_False
+        
+        End If
+        If btnTic1.Caption = "X" And btnTic5.Caption = "X" And btnTic9.Caption = "X" Then
+            btnTic1.BackColor = &HFF0000
+            btnTic5.BackColor = &HFF0000
+            btnTic9.BackColor = &HFF0000
+            MsgBox "The Winner is Team X", vbInformation
+            Labe13.Caption = Label3.Caption + 1
+        Call Enable_False
+        
+        End If
+        
+        If btnTic3.Caption = "X" And btnTic5.Caption = "X" And btnTic7.Caption = "X" Then
+            btnTic3.BackColor = &H8080FF
+            btnTic5.BackColor = &H8080FF
+            btnTic7.BackColor = &H8080FF
+            MsgBox "The Winner is Team X", vbInformation
+            Labe13.Caption = Labe13.Caption + 1
+            
+            Call Enable_False
+        End If
+        
+        If btnTic2.Caption = "X" And btnTic5.Caption = "X" And btnTic8.Caption = "X" Then
+            btnTic2.BackColor = &H80000005
+            btnTic5.BackColor = &H80000005
+            btnTic8.BackColor = &H80000005
+            MsgBox "The Winner is Team X", vbInformation
+            Labe13.Caption = Labe13.Caption + 1
+            Call Enable_False
+
+        End If
+        If btnTic3.Caption = "X" And btnTic6.Caption = "X" And btnTic9.Caption = "X" Then
+            btnTic3.BackColor = &HFFFF&
+            btnTic6.BackColor = &HFFFF&
+            btnTic9.BackColor = &HFFFF&
+            MsgBox "The Winner is Team X", vbInformation
+            Label3.Caption = Label3.Caption + 1
+            Call Enable_False
+        End If
+
+        If btnTic4.Caption = "X" And btnTic5.Caption = "X" And btnTic6.Caption = "X" Then
+            btnTic4.BackColor = &H800080
+            btnTic5.BackColor = &H800080
+            btnTic6.BackColor = &H800080
+            MsgBox "The Winner is Team X", vbInformation
+            Labe13.Caption = Label3.Caption + 1
+            Call Enable_False
+        End If
+        
+        If btnTic1.Caption = "O" And btnTic2.Caption = "o" And btnTic3.Caption = "0" Then
+            btnTic1.BackColor = &H80FF80
+            btnTic2.BackColor = &H80FF80
+            btnTic3.BackColor = &H80FF80
+            MsgBox "The Winner is Team O", vbInformation
+            Labe14.Caption = Label4.Caption + 1
+            Call Enable_False
+
+        End If
+        If btnTic1.Caption = "O" And btnTic4.Caption = "0" And btnTic7.Caption = "O" Then
+            btnTic1.BackColor = &HC0FFC0
+            btnTic4.BackColor = &HC0FFC0
+            btnTic7.BackColor = &HC0FFC0
+            MsgBox "The Winner is Team O", vbInformation
+            Labe14.Caption = Label4.Caption + 1
+            Call Enable_False
+        End If
+        If btnTic1.Caption = "O" And btnTicS.Caption = "o" And btnTic9.Caption = "o" Then
+            btnTicl.BackColor = GHFFCOFF
+            btnTic5.BackColor = GHFFCOFF
+            btnTic9.BackColor = GHFFCOFF
+            MsgBox "The Winner is Team O", vbInformation
+            Labe14.Caption = Label4.Caption + 1
+            
+            Call Enable_False
+        End If
+        If btnTic3.Caption = "O" And btnTic5.Caption = "0" And btnTic7.Caption = "O" Then
+            btnTic3.BackColor = &HC000&
+            btnTic5.BackColor = &HC000&
+            btnTic7.BackColor = &HC000&
+            MsgBox "The Winner is Team O", vbInformation
+            Label4.Caption = Label4.Caption + 1
+            
+            Call Enable_False
+        End If
+        If btnTic2.Caption = "O" And btnTic5.Caption = "O" And btnTic8.Caption = "O" Then
+            btnTic2.BackColor = GH404080
+            btnTic5.BackColor = &H404080
+            btnTic8.BackColor = &H404080
+            MsgBox "The Winner is Team O", vbInformation
+            Labe14.Caption = Label4.Caption + 1
+            
+            Call Enable_False
+        End If
+        
+        If btnTic3.Caption = "O" And btnTic6.Caption = "O" And btnTic9.Caption = "O" Then
+            btnTic3.BackColor = &H80FFFF
+            btnTic6.BackColor = GH80FFFF
+            btnTic9.BackColor = &H80FFFF
+            MsgBox "The Winner is Team O", vbInformation
+            Labe14.Caption = Labe14.Caption + 1
+            Call Enable_False
+
+        End If
+
+        If btnTic4.Caption = "O" And btnTic5.Caption = "0" And btnTic6.Caption = "O" Then
+            btnTic4.BackColor = &HC0FFFF
+            btnTic5.BackColor = &HC0FFFF
+            btnTic6.BackColor = &HC0FFFF
+            MsgBox "The Winner is Team O", vbInformation
+            Labe14.Caption = Label4.Caption + 1
+            Call Enable_False
+        End If
+
+        If btnTic4.Caption = "O" And btnTic5.Caption = "o" And btnTic9.Caption = "0" Then
+            btnTic4.BackColor = &HFF8080
+            btnTic5.BackColor = &HFF8080
+            btnTic9.BackColor = &HFF8080
+            MsgBox "The Winner is Team O", vbInformation
+            Label4.Caption = Label4.Caption + 1
+            Call Enable_False
+            
+        End If
+        
+        If btnTic7.Caption = "O" And btnTic8.Caption = "O" And btnTic9.Caption = "O" Then
+            btnTic7.BackColor = GHFF8080
+            btnTic8.BackColor = &HFF8080
+            btnTic9.BackColor = &HFF8080
+            MsgBox "The Winner is Team O", vbInformation
+            Labe14.Caption = Labe14.Caption + 1
+            Call Enable_False
+            
+        End If
+        If btnTic7.Caption = "X" And btnTic8.Caption = "X" And btnTic9.Caption = "X" Then
+            btnTic7.BackColor = &HFFFF00
+            btnTic8.BackColor = &HFFFF00
+            btnTic9.BackColor = &HFFFF00
+            MsgBox "The Winner is Team X", vbInformation
+            Label3.Caption = Label3.Caption + 1
+            Call Enable_False
+        End If
+
+End Sub
+
+Private Sub Enable_False()
+
+    btnTic1.Enabled = False
+    btnTic2.Enabled = False
+    btnTic3.Enabled = False
+    btnTic4.Enabled = False
+    btnTic5.Enabled = False
+    btnTic6.Enabled = False
+    btnTic7.Enabled = False
+    btnTic8.Enabled = False
+    btnTic9.Enabled = False
+
+End Sub
+
